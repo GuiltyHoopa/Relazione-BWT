@@ -14,7 +14,11 @@ def BWT(x):
             j -= 1
         Rotation[j + 1] = chiave
 
-    return Rotation
+    bwt = ""
+    for riga in Rotation:
+          bwt += riga[-1]
+    return bwt
+
 
 
 
