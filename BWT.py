@@ -5,6 +5,16 @@ def BWT(x):
     for i in range(len(BWT)):
         Rotation.append(BWT[i:] + BWT[:i])
     
+    for i in range(1, len(Rotation)):
+        chiave = Rotation[i]
+        J = i - 2
+
+        while j >= 0 and Rotation[j] > chiave:
+            Rotation[j + 1] = Rotation[j]
+            j -= 1
+        Rotation[j + 1] = chiave
+
+    return Rotation
 
 
 
