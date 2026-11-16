@@ -7,7 +7,7 @@ def BWT(x):
     
     for i in range(1, len(Rotation)):
         chiave = Rotation[i]
-        J = i - 2
+        j = i - 1
 
         while j >= 0 and Rotation[j] > chiave:
             Rotation[j + 1] = Rotation[j]
